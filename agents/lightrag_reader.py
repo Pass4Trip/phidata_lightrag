@@ -120,14 +120,21 @@ def lightrag_query(query: str = "une recherche dans la base graph"):
         mode="hybrid"
         query_param = QueryParam(mode=mode)
         
+        print("lightrag_query >>>>> ")
+        print(query)
         #vdb_filter= [ "Zulli"]
-        vdb_filter= ["lea"]
+        vdb_filter= []
 
         # Exécution asynchrone de la requête
         response = asyncio.run(rag.aquery(query, param=query_param, vdb_filter=vdb_filter))
         
         print(f"\nQuestion: {query}")
         print(f"\nRéponse: {response}")
+
+    
+        json_res = []
+        json_res.append(response)
+        return json.dumps(json_res) 
 
     except Exception as e:
         print(f"An error occurred: {e}")
@@ -141,7 +148,9 @@ def get_lightrag_reader(
     session_id: Optional[str] = None,
     debug_mode: bool = False,
 ) -> Agent:
-    return Agent(
+
+
+    lightrag = Agent(
         name="LIGHTRAG Query",
         agent_id="lightrag_query",
         session_id=session_id,
@@ -156,10 +165,11 @@ def get_lightrag_reader(
         # Tools available to the agent
         tools=[lightrag_query],
         # A description of the agent that guides its overall behavior
-        role="Tu es un agent d'une Team qui dispose des capacités à aider l'utilisateur à trouver une information dans la base graph.",  
+        role="envoyer le message de l'utilisateur en l'etat à la fonction lightrag_query",  
         # A list of instructions to follow, each as a separate item in the list
         instructions=[
-            "Etape 1 : Analyser la demande et utiliser uniquement les informations en provenance de la fonction lightrag_query pour répondre à l'utilisateur.\n",
+            "tu dispose d'un message qu'on te donne en entrée et tu dois envoyer le message de l'utilisateur en l'etat à la fonction lightrag_query\n",
+            "Exmeple : si on te donne en input le message 'recherche des info sur Paul' alors appel la fonction lightrag_query('recherche des info sur Paul')\n",
             ],
         # Format responses as markdown
         markdown=True,
@@ -180,3 +190,5 @@ def get_lightrag_reader(
         # Show debug logs
         debug_mode=True,
     )
+    
+    return lightrag

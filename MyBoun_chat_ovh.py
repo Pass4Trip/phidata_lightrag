@@ -112,7 +112,7 @@ def main():
     # Configurer le parser d'arguments
     parser = argparse.ArgumentParser(description="Envoyer un message à l'API de chat")
     parser.add_argument("message", type=str, help="Le message à envoyer")
-    parser.add_argument("--agent_id", type=str, default="example-agent", help="ID de l'agent")
+    parser.add_argument("--agent_id", type=str, default="lightrag_query", help="ID de l'agent")
     parser.add_argument("--session_id", type=str, default="vinh_session_id", help="ID de session")
     parser.add_argument("--user_id", type=str, default="vinh_id", help="ID de l'utilisateur")
     #parser.add_argument("--url", type=str, default="http://vps-af24e24d.vps.ovh.net/v1/playground/agent/run", help="URL de l'API de chat")

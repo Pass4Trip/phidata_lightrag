@@ -4,7 +4,6 @@ import logging
 import re
 from typing import Dict, Any
 import json
-import aio_pika
 import asyncio
 from pathlib import Path
 from dotenv import load_dotenv

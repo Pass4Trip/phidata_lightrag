@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from typing import Any, Union, cast
 import networkx as nx
 import numpy as np
-from nano_vectordb import NanoVectorDB
+#from nano_vectordb import NanoVectorDB
 
 from .utils import (
     logger,

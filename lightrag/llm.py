@@ -8,8 +8,8 @@ from typing import List, Dict, Callable, Any, Union
 import aioboto3
 import aiohttp
 import numpy as np
-import ollama
-import torch
+#import ollama
+#import torch
 from openai import (
     AsyncOpenAI,
     APIConnectionError,
@@ -24,7 +24,7 @@ from tenacity import (
     wait_exponential,
     retry_if_exception_type,
 )
-from transformers import AutoTokenizer, AutoModelForCausalLM
+#from transformers import AutoTokenizer, AutoModelForCausalLM
 
 from .utils import (
     wrap_embedding_func_with_attrs,
@@ -198,18 +198,18 @@ async def bedrock_complete_if_cache(
     return response["output"]["message"]["content"][0]["text"]
 
 
-@lru_cache(maxsize=1)
-def initialize_hf_model(model_name):
-    hf_tokenizer = AutoTokenizer.from_pretrained(
-        model_name, device_map="auto", trust_remote_code=True
-    )
-    hf_model = AutoModelForCausalLM.from_pretrained(
-        model_name, device_map="auto", trust_remote_code=True
-    )
-    if hf_tokenizer.pad_token is None:
-        hf_tokenizer.pad_token = hf_tokenizer.eos_token
+# @lru_cache(maxsize=1)
+# def initialize_hf_model(model_name):
+#     hf_tokenizer = AutoTokenizer.from_pretrained(
+#         model_name, device_map="auto", trust_remote_code=True
+#     )
+#     hf_model = AutoModelForCausalLM.from_pretrained(
+#         model_name, device_map="auto", trust_remote_code=True
+#     )
+#     if hf_tokenizer.pad_token is None:
+#         hf_tokenizer.pad_token = hf_tokenizer.eos_token
 
-    return hf_model, hf_tokenizer
+#     return hf_model, hf_tokenizer
 
 
 @retry(

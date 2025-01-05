@@ -42,7 +42,7 @@ from lightrag.storage import (
 
 from lightrag.kg.neo4j_impl import Neo4JStorage
 
-from lightrag.kg.oracle_impl import OracleKVStorage, OracleGraphStorage, OracleVectorDBStorage
+#from lightrag.kg.oracle_impl import OracleKVStorage, OracleGraphStorage, OracleVectorDBStorage
 
 from lightrag.kg.milvus_impl import MilvusVectorDBStorage
 
@@ -239,16 +239,16 @@ class LightRAG:
         return {
             # kv storage
             "JsonKVStorage": JsonKVStorage,
-            "OracleKVStorage": OracleKVStorage,
+            #"OracleKVStorage": OracleKVStorage,
             "MongoKVStorage": MongoKVStorage,
             # vector storage
             "NanoVectorDBStorage": NanoVectorDBStorage,
-            "OracleVectorDBStorage": OracleVectorDBStorage,
+            #"OracleVectorDBStorage": OracleVectorDBStorage,
             "MilvusVectorDBStorage": MilvusVectorDBStorage,
             # graph storage
             "NetworkXStorage": NetworkXStorage,
             "Neo4JStorage": Neo4JStorage,
-            "OracleGraphStorage": OracleGraphStorage,
+            #"OracleGraphStorage": OracleGraphStorage,
             # "ArangoDBStorage": ArangoDBStorage
         }
 

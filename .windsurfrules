@@ -1,0 +1,4 @@
+j'utilise un repo github phidata qui utilise les cmd :  phi ws down -y et  phi ws up -y
+Ces cmd pemrettent de créer et de supprimer les container docker sur mon mac
+
+J'utilise en venv UV

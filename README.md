@@ -5,36 +5,53 @@ This repo contains the code for running an agent-api and supports 2 environments
 1. **dev**: A development environment running locally on docker
 2. **prd**: A production environment running on AWS ECS
 
-## Setup Workspace
+## Configuration et Installation
 
-1. [Install uv](https://docs.astral.sh/uv/#getting-started): `curl -LsSf https://astral.sh/uv/install.sh | sh`
+### Prérequis
+- Python 3.12
+- Docker
+- Environnement virtuel (recommandé)
 
-> from the `agent-api` dir:
+### Étapes d'installation
 
-2. Install workspace and activate the virtual env:
-
-```sh
-./scripts/install.sh
+1. **Configurer l'environnement**
+```bash
+# Créer un environnement virtuel
+python3.12 -m venv .venv
 source .venv/bin/activate
+
+# Installer les dépendances
+pip install -r requirements.txt
+
+# Installer phidata en mode éditable
+pip install -e ///app/phidata
 ```
 
-3. Setup workspace:
-
-```sh
-phi ws setup
+2. **Configuration OpenAI**
+- Ajouter votre clé API OpenAI dans `.env`
+```
+OPENAI_API_KEY=sk-votre_clé_api
 ```
 
-4. Copy `workspace/example_secrets` to `workspace/secrets`:
+3. **Démarrer les conteneurs Docker**
+```bash
+# Créer et démarrer les conteneurs
+phi ws up -y
 
-```sh
-cp -r workspace/example_secrets workspace/secrets
+# Arrêter les conteneurs
+phi ws down -y
 ```
 
-5. Optional: Create `.env` file:
-
-```sh
-cp example.env .env
+4. **Résolution des dépendances**
+Si des erreurs de dépendances surviennent :
+```bash
+pip install aioboto3 hnswlib pika prefect pymilvus pymongo pyvis tenacity xxhash
 ```
+
+### Dépannage
+- Vérifiez que tous les packages sont installés
+- Assurez-vous que la clé API OpenAI est correcte
+- Utilisez `--verbose` pour plus d'informations lors de l'installation
 
 ## Run Agent Api locally
 

@@ -1,0 +1,32 @@
+2025-01-05 20:57:22,370 - lightrag - INFO - 🔍 Expression de filtrage : id in ["ent-812b94eb454835665e25797809c1d137", "ent-cbbc1cd12a3fa7e9ddc0d1c89c179e3c", "ent-cc9cdfbcd9f3d90f303b79f118b93390"]
+2025-01-05 20:57:22,394 - lightrag - INFO - Résultats de recherche - Nombre de résultats: 3
+2025-01-05 20:57:25,050 - lightrag - INFO - Nombre de node_datas : 3
+2025-01-05 20:57:25,050 - lightrag - INFO - Node 0 - Clés disponibles : ['entity_type', 'custom_id', 'description', 'source_id', 'entity_id', 'entity_name', 'rank']
+2025-01-05 20:57:25,051 - lightrag - INFO - Node 1 - Clés disponibles : ['entity_type', 'description', 'source_id', 'entity_id', 'entity_name', 'rank']
+2025-01-05 20:57:25,051 - lightrag - INFO - Node 2 - Clés disponibles : ['entity_type', 'description', 'source_id', 'entity_id', 'entity_name', 'rank']
+2025-01-05 20:57:25,051 - lightrag - INFO - Nombre de relations : 2
+2025-01-05 20:57:25,051 - lightrag - INFO - Relation 0 - Clés disponibles : ['src_tgt', 'rank', 'relation_id', 'keywords', 'weight', 'description', 'source_id', 'type']
+2025-01-05 20:57:25,051 - lightrag - INFO - Relation 0 - weight: 1.9
+2025-01-05 20:57:25,052 - lightrag - INFO - Relation 1 - Clés disponibles : ['src_tgt', 'rank', 'relation_id', 'keywords', 'weight', 'description', 'source_id', 'type']
+2025-01-05 20:57:25,052 - lightrag - INFO - Relation 1 - weight: 1.85
+2025-01-05 20:57:25,857 - lightrag - INFO - 🔍 Expression de filtrage : id in ["rel-4c22270f8cca6f854fec8d8e76fc1fba", "rel-afdcfcf494c55b98cf388a691b1e7230"]
+2025-01-05 20:57:25,866 - lightrag - INFO - Résultats de recherche - Nombre de résultats: 2
+2025-01-05 21:28:23,608 - lightrag - INFO - 🔍 Expression de filtrage : id in ["ent-a951f20edbb6074fadafc90190ab0803", "ent-812b94eb454835665e25797809c1d137", "ent-13c22d15662d613848defa8bf5bbb957", "ent-eeaee21bfd108b31f520020b46050375", "ent-cbbc1cd12a3fa7e9ddc0d1c89c179e3c"]
+2025-01-05 21:28:23,645 - lightrag - INFO - Résultats de recherche - Nombre de résultats: 5
+2025-01-05 21:28:26,767 - lightrag - INFO - Nombre de node_datas : 5
+2025-01-05 21:28:26,768 - lightrag - INFO - Node 0 - Clés disponibles : ['entity_type', 'custom_id', 'description', 'source_id', 'entity_id', 'entity_name', 'rank']
+2025-01-05 21:28:26,768 - lightrag - INFO - Node 1 - Clés disponibles : ['entity_type', 'description', 'source_id', 'entity_id', 'entity_name', 'rank']
+2025-01-05 21:28:26,768 - lightrag - INFO - Node 2 - Clés disponibles : ['entity_type', 'description', 'source_id', 'entity_id', 'entity_name', 'rank']
+2025-01-05 21:28:26,768 - lightrag - INFO - Node 3 - Clés disponibles : ['entity_type', 'description', 'source_id', 'entity_id', 'entity_name', 'rank']
+2025-01-05 21:28:26,768 - lightrag - INFO - Node 4 - Clés disponibles : ['entity_type', 'description', 'source_id', 'entity_id', 'entity_name', 'rank']
+2025-01-05 21:28:26,769 - lightrag - INFO - Nombre de relations : 4
+2025-01-05 21:28:26,769 - lightrag - INFO - Relation 0 - Clés disponibles : ['src_tgt', 'rank', 'relation_id', 'keywords', 'weight', 'description', 'source_id', 'type']
+2025-01-05 21:28:26,769 - lightrag - INFO - Relation 0 - weight: 1.85
+2025-01-05 21:28:26,769 - lightrag - INFO - Relation 1 - Clés disponibles : ['src_tgt', 'rank', 'relation_id', 'keywords', 'weight', 'description', 'source_id', 'type']
+2025-01-05 21:28:26,769 - lightrag - INFO - Relation 1 - weight: 1.85
+2025-01-05 21:28:26,770 - lightrag - INFO - Relation 2 - Clés disponibles : ['src_tgt', 'rank', 'relation_id', 'keywords', 'weight', 'description', 'source_id', 'type']
+2025-01-05 21:28:26,770 - lightrag - INFO - Relation 2 - weight: 1.85
+2025-01-05 21:28:26,770 - lightrag - INFO - Relation 3 - Clés disponibles : ['src_tgt', 'rank', 'relation_id', 'keywords', 'weight', 'description', 'source_id', 'type']
+2025-01-05 21:28:26,770 - lightrag - INFO - Relation 3 - weight: 1.85
+2025-01-05 21:28:27,229 - lightrag - INFO - 🔍 Expression de filtrage : id in ["rel-91a776201af05595a86a0431dbf14f9e", "rel-7d3545affe9ea46cb23a1a83a99827b6", "rel-afdcfcf494c55b98cf388a691b1e7230", "rel-ac1957a07eebf6da1c0ba00fad89062f"]
+2025-01-05 21:28:27,240 - lightrag - INFO - Résultats de recherche - Nombre de résultats: 4
