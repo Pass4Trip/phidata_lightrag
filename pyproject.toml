@@ -22,6 +22,25 @@ dependencies = [
   "sqlalchemy",
   "tiktoken",
   "typer",
+  # Nouvelles dépendances de LightRAG
+  "aioboto3>=11.3.0",
+  "graspologic>=3.3.0",
+  "hnswlib>=0.7.0",
+  "nano-vectordb>=0.0.4",
+  "networkx>=3.2.1",
+  "pika>=1.3.2",
+  "prefect>=2.14.12",
+  "python-dotenv>=1.0.0",
+  "tenacity>=8.2.3",
+  "xxhash>=3.4.1",
+  "pyvis>=0.3.2",
+  "neo4j>=5.0.0",
+  "ollama",
+  "transformers>=4.47.0",
+  "torch>=2.5.1",
+  "oracledb>=2.5.0",
+  "pymilvus>=2.3.4",
+  "pymongo>=4.6.1",
 ]
 
 [build-system]
